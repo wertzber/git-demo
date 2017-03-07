@@ -11,11 +11,16 @@ paths:
     get:
       parameters:
         - name: accountId
-          in: query
+          in: path
           description: Account name
           required: true
           type: string
         - name: serviceName
+          in: path
+          description: Account name
+          required: true
+          type: string
+        - name: version
           in: query
           description: Account name
           required: true
