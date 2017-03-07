@@ -2,10 +2,24 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: Simple Elad API
+  title: Domain API
+  host: api.liveperson.net
+  basePath: /http://api.liveperson.net/api/account/
+
 paths:
-  /elad:
+  /{accountId}/service/{serviceName}/baseURI.json:
     get:
+      parameters:
+        - name: accountId
+          in: query
+          description: Account name
+          required: true
+          type: string
+        - name: serviceName
+          in: query
+          description: Account name
+          required: true
+          type: string
       responses:
         200:
           description: OK
